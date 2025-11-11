@@ -26,7 +26,7 @@ public class Spawner : MonoBehaviour
 
         Vector3 spawnPosition = new Vector3(spawnX, spawnY);
 
-        GameObject enemy = PoolManager.instance.Get(0); //오브젝트 추가됨
+        GameObject enemy = PoolManager.instance.Get(Random.Range(1,3)); //오브젝트 추가됨
         enemy.transform.position = spawnPosition;
     }
 }

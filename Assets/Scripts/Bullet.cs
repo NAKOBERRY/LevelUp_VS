@@ -7,7 +7,7 @@ public class Bullet : MonoBehaviour
 
     private Rigidbody2D rigid;
 
-    private float _damage;
+    private float _damage; //20
 
     private void Awake()
     {
@@ -24,8 +24,9 @@ public class Bullet : MonoBehaviour
     {
         if(collision.CompareTag("Enemy"))
         {
-            //collision.GetComponent<Monster>().OnDamage(_damage);
+            collision.GetComponent<Monster>().OnDamage(_damage);
             gameObject.SetActive(false);
+            Debug.Log("피해 입힘");
         }
     }
 

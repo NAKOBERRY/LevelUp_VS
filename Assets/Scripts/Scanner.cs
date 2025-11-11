@@ -18,7 +18,7 @@ public class Scanner : MonoBehaviour
         Transform result = null; //타겟을 담을 지역 변수
         float distance = 99999999; //타겟의 거리를 담을 변수(999...는 임시)
 
-        RaycastHit2D[] targets = Physics2D.CircleCastAll(transform.position, scanRange, Vector2.zero, 0, targetLayer);
+        RaycastHit2D[] targets = Physics2D.CircleCastAll(transform.position, scanRange, Vector2.zero, 0, targetLayer); 
         //스캔 거리 안에 있는 타겟레이어를 지닌 모든 오브젝트를 targets라는 배열에 담음
 
         foreach(var target in targets) //targets배열에 담긴 모든 오브젝트와 플레이어 간의 직선 거리를 구함
@@ -37,4 +37,5 @@ public class Scanner : MonoBehaviour
         }
         return result;
     }
+
 }
